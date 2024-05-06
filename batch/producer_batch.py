@@ -26,4 +26,4 @@ if __name__ == "__main__":
     for i in range(100):
         message = f'Mensagem {i}'
         producer.send_message(topic, message)
-        #time.sleep(0.1)  # Simula a produção de mensagens com um intervalo de 100 ms
+        time.sleep(0.1)  # Simula a produção de mensagens com um intervalo de 100 ms

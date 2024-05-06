@@ -5,6 +5,8 @@ bootstrap_servers = 'localhost:29092'
 topic = 'meu_topico'
 
 # Configurações do consumidor
+# 'auto.offset.reset': 'earliest' = o consumidor começará a ler do início do tópico.
+# 'auto.offset.reset': 'latest' = o consumidor começará a ler mensagens que são produzidas após a conexão do consumidor ao tópico.
 consumer_conf = {
     'bootstrap.servers': bootstrap_servers,
     'group.id': 'meu_grupo',

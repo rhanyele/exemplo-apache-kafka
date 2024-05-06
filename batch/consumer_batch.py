@@ -3,6 +3,9 @@ from confluent_kafka.admin import AdminClient, NewTopic
 from datetime import datetime, timedelta
 import time
 
+# Configurações do consumidor
+# 'auto.offset.reset': 'earliest' = o consumidor começará a ler do início do tópico.
+# 'auto.offset.reset': 'latest' = o consumidor começará a ler mensagens que são produzidas após a conexão do consumidor ao tópico.
 class BatchConsumer:
     def __init__(self, bootstrap_servers, group_id, topic):
         self.bootstrap_servers = bootstrap_servers

@@ -32,6 +32,8 @@ def main():
     topic = 'meu_topico_postgres'
 
     # Inicializa o consumidor Kafka
+    # 'auto.offset.reset': 'earliest' = o consumidor começará a ler do início do tópico.
+    # 'auto.offset.reset': 'latest' = o consumidor começará a ler mensagens que são produzidas após a conexão do consumidor ao tópico.
     consumer = Consumer({
         'bootstrap.servers': bootstrap_servers,
         'group.id': 'meu_grupo',
