@@ -2,7 +2,7 @@
 
 Kafka é uma plataforma de streaming distribuída normalmente usada para construir pipelines de dados em tempo real, mas pode ser adaptada para diferentes cenários.
 
-O projeto é uma aplicação Python utilizando o Apache Kafka, criada para ser um exemplo das principais funcionalidades do Kafka de streaming, em batch e utilizando banco de dados. Este projeto tem como objetivo ser uma referência para projetos posteriores com a ferramenta.
+O projeto é uma aplicação Python utilizando o Apache Kafka, criada para ser um exemplo das funcionalidades básicas do Kafka. Este projeto tem como objetivo ser uma referência para projetos posteriores com a ferramenta.
 
 No Apache Kafka, um consumer é um programa que lê dados de um tópico (um canal de comunicação) e os processa. É como um receptor de mensagens em uma fila de correio. Enquanto isso, um producer é um programa que envia dados para um tópico. É como o remetente de mensagens na fila de correio. Em resumo, os consumers consomem (leem) dados e os producers produzem (enviam) dados no Kafka.
 
@@ -119,18 +119,18 @@ poetry run python .\batch\producer_batch.py
 
 Cria um consumer que vai consumir/ler as mensagens em lote de um tópico no Kafka.
 ```bash
-poetry run python .\batch\consumer.py 
+poetry run python .\batch\consumer_batch.py 
 ```
 
 ### Database
 Cria um producer que vai enviar 10 mensagens seguidas para um tópico no Kafka.
 ```bash
-poetry run python .\database\producer_batch.py 
+poetry run python .\database\producer_database.py 
 ```
 
 Cria um consumer que vai consumir/ler as mensagens de um tópico no Kafka e salvar no banco de dados PostreSQL.
 ```bash
-poetry run python .\database\consumer.py 
+poetry run python .\database\consumer_database.py 
 ```
 
 ### Streaming several topics
